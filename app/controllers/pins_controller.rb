@@ -3,7 +3,7 @@ class PinsController < ApplicationController
 		@pins = Pin.all
 		respond_to do |format|
 			format.html
-			format.json { render :json => {:pin => @pin.as_json(except: [:id, :created_at, :updated_at])}}
+			format.json { render :json => {:pin => @pins.as_json(except: [:id, :created_at, :updated_at])}}
 		end
 	end
 
